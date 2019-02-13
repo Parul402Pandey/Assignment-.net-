@@ -1,0 +1,31 @@
+1.//first Program
+using System.IO;
+using System;
+
+class Program
+{
+    public bool IsCheck(int n)
+    {
+        if(n%3==0||n%7==0)
+       return true;
+       else
+       return false;
+    }
+    static void Main()
+    {
+        Program p1=new Program();
+        Console.WriteLine("Input First Integer");
+        int n=Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(n);
+       Console.WriteLine( p1.IsCheck(n));
+        
+        
+    }
+}
+output:-
+$mcs *.cs -out:main.exe
+$mono main.exe
+Input First Integer
+15
+True
+
