@@ -1,0 +1,20 @@
+using System;
+public class MyProgram
+{
+
+public static void Main()
+{
+	Console.WriteLine("Enter First Number:-");
+	int n1=Convert.ToInt16(Console.ReadLine());
+	Console.WriteLine("Enter Second Number:-");
+	int n2=Convert.ToInt16(Console.ReadLine());
+	for(int lcm=1;lcm<=(n1*n2);lcm++)
+	{
+		if((lcm%n1==0)&&(lcm%n2==0))
+		{
+			Console.WriteLine("The Lcm is {0}",lcm);
+			break;
+		}
+	}
+}
+}
