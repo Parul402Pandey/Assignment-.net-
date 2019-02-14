@@ -1,0 +1,44 @@
+using System;
+public class MyProgram
+{
+	static int j=1,count,sum=0;
+	public static void Show(int n)
+	{
+		int[] array=new int[n];
+		for(int i=0;i<n;i++)
+		{
+			count=0;
+			start:
+			if(j%2==1)
+			{
+				array[i]=j;
+				j++;
+				count++;
+			}
+			if(count==0)
+			{
+				j++;
+				goto start;
+			}
+		}
+		Console.Write("The odd Numbers are:-");
+		for(int k=0;k<array.Length;k++)
+		{
+			Console.Write(array[k]+" ");
+			sum=sum+array[k];
+		}
+		
+		Console.WriteLine("\n"+"The sum of odd numbers is "+sum);
+		
+	}
+	
+public static void Main()
+{
+	int n;
+	Console.Write("Enter a Number:-");
+	n=Convert.ToInt16(Console.ReadLine());
+	Show(n);
+	
+	
+}
+}
