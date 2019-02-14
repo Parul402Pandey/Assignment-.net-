@@ -1,0 +1,45 @@
+using System;
+public class MyProgram
+{
+	static int sum=0,average=0,s1=0;
+	public static int Sum(int[] a)
+	{
+		//Console.Write("hello");
+		for(int j=0;j<a.Length;j++)
+		{
+			//Console.Write("Hello");
+			sum=sum+a[j];
+			//Console.Write(sum);
+		}
+		return sum;
+	}
+	public static float Average(int[] a)
+	{
+		
+		s1=Sum(a);
+		average=(s1/3);
+		return average;
+		
+	}
+public static void Main()
+{
+	Console.WriteLine("Enter the elements:-");
+	int[] array=new int[3];
+	int n;
+	for(int i=0;i<3;i++)
+	{
+		 n=Convert.ToInt16(Console.ReadLine());
+		array[i]=n;
+	}
+	for(int j=0;j<array.Length;j++)
+	{
+		Console.Write(array[j]);
+	}
+
+	int sum=Sum(array);
+	Console.Write(sum);
+	float sum1=Average(array);
+	Console.Write(sum1);
+	
+}
+}
